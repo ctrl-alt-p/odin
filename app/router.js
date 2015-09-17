@@ -26,6 +26,25 @@ Router.map(function() {
   this.route('trading', function() {
     this.route('orders');
   });
+
+  this.route('market', function() {
+    this.route('quotes');
+    this.route('timeandsales');
+    this.route('option-chains');
+    this.route('option-strikes');
+    this.route('option-expirations');
+    this.route('history');
+    this.route('clock');
+    this.route('calendar');
+    this.route('search');
+    this.route('lookup');
+    this.route('events', function() {
+      this.route('session');
+    });
+
+    this.route('fundamentals', function() {});
+  });
+  this.route('watchlists');
 });
 
 export default Router;
