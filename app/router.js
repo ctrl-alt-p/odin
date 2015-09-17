@@ -15,7 +15,17 @@ Router.map(function() {
     this.route('orders');
   });
 
-  this.route('accounts', function() {});
+  this.route('accounts', function() {
+    this.route('balances');
+    this.route('positions');
+    this.route('history');
+    this.route('gainloss');
+    this.route('orders');
+  });
+
+  this.route('trading', function() {
+    this.route('orders');
+  });
 });
 
 export default Router;
