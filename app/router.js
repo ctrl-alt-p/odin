@@ -41,8 +41,6 @@ Router.map(function() {
         this.route('events', function() {
             this.route('session');
         });
-
-        this.route('fundamentals', function() {});
     });
     this.route('watchlists');
 });
