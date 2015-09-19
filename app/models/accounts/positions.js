@@ -1,4 +1,4 @@
-<pre>
+/**
  * https://developer.tradier.com/documentation/accounts/get-account-positions
  *
  * Endpoint:
@@ -22,5 +22,14 @@
  *   quantity               = Number of shares held.
  *   symbol                 = Symbol
  *
- </pre>
-{{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    cost_basis: DS.attr('string'),
+    date_acquired: DS.attr('string'),
+    id: DS.attr('string'),
+    quantity: DS.attr('string'),
+    symbol: DS.attr('string')
+});

@@ -1,4 +1,5 @@
-<pre> * https://developer.tradier.com/documentation/markets/get-options-chains
+/**
+ * https://developer.tradier.com/documentation/markets/get-options-chains
  *
  * Endpoint:
  * =========
@@ -29,5 +30,16 @@
  *   change             = Daily net change
  *   open_interest      = Current open interest
  *
- </pre>
-{{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    symbol: DS.attr('string'),
+    strike: DS.attr('string'),
+    last: DS.attr('string'),
+    bid: DS.attr('string'),
+    ask: DS.attr('string'),
+    change: DS.attr('string'),
+    open_interest: DS.attr('string')
+});

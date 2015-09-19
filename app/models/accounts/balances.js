@@ -1,4 +1,4 @@
-<pre>
+/**
  * https://developer.tradier.com/documentation/accounts/get-account-balance
  *
  * Endpoint:
@@ -47,5 +47,41 @@
  *   unsettled_funds         = Cash that is in the account from recent stock or option sales, but has not yet settled; cash from stock sales occurring during the last 3 trading days or from option sales occurring during the previous trading day.
  *   total_cash              = The total amount of cash in the account.
  *   total_equity            = The total account value.
-</pre>
-{{outlet}}
+ *
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    account_number: DS.attr('string'),
+    account_type: DS.attr('string'),
+    cash_available: DS.attr('string'),
+    close_pl: DS.attr('string'),
+    current_requirement: DS.attr('string'),
+    day_trade_buying_power: DS.attr('string'),
+    dividend_balance: DS.attr('string'),
+    equity: DS.attr('string'),
+    fed_call: DS.attr('string'),
+    long_liquid_value: DS.attr('string'),
+    long_market_value: DS.attr('string'),
+    maintenance_call: DS.attr('string'),
+    market_value: DS.attr('string'),
+    net_value: DS.attr('string'),
+    open_pl: DS.attr('string'),
+    option_buying_power: DS.attr('string'),
+    option_long_value: DS.attr('string'),
+    option_requirement: DS.attr('string'),
+    option_short_value: DS.attr('string'),
+    pending_cash: DS.attr('string'),
+    pending_orders_count: DS.attr('string'),
+    sweep: DS.attr('string'),
+    short_liquid_value: DS.attr('string'),
+    short_market_value: DS.attr('string'),
+    stock_buying_power: DS.attr('string'),
+    stock_long_value: DS.attr('string'),
+    stock_short_value: DS.attr('string'),
+    uncleared_funds: DS.attr('string'),
+    unsettled_funds: DS.attr('string'),
+    total_cash: DS.attr('string'),
+    total_equity: DS.attr('string')
+});

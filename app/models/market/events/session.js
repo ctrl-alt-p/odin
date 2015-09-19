@@ -1,4 +1,5 @@
-<pre> * https://developer.tradier.com/documentation/markets/create-events-session
+/**
+ * https://developer.tradier.com/documentation/markets/create-events-session
  *
  * Endpoint:
  * =========
@@ -18,5 +19,11 @@
  *   sessionid          = A unique session ID for use with streaming.
  *   url                = The URL to access for streaming market data.
  *
- </pre>
- {{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    sessionid: DS.attr('string'),
+    url: DS.attr('string')
+});

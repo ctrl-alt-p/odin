@@ -1,4 +1,5 @@
-<pre> * https://developer.tradier.com/documentation/markets/get-options-strikes
+/**
+ * https://developer.tradier.com/documentation/markets/get-options-strikes
  *
  * Endpoint:
  * =========
@@ -23,5 +24,10 @@
  *   Field              = Description
  *   strike             = Individual strike price
  *
- </pre>
- {{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    strike: DS.attr('string')
+});

@@ -1,4 +1,5 @@
-<pre> * https://developer.tradier.com/documentation/markets/get-timesales
+/**
+ * https://developer.tradier.com/documentation/markets/get-timesales
  *
  * Endpoint:
  * =========
@@ -33,6 +34,12 @@
  *   price              = Last price for the time-series interval
  *   volume             = Total volume for the time-series interval
  *
- </pre>
+ */
+import Ember from 'ember';
 
-{{outlet}}
+export
+default DS.Model.extend({
+    time: DS.attr('string'),
+    price: DS.attr('string'),
+    volume: DS.attr('string')
+});

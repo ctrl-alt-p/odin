@@ -1,10 +1,10 @@
-<pre>
- * https://developer.tradier.com/documentation/accounts/get-account-gainloss
+/**
+ * https://developer.tradier.com/documentation/user/get-gainloss
  *
  * Endpoint:
  * =========
  *   Method: GET
- *   URL:    /v1/accounts/{account_id}/gainloss
+ *   URL:    /v1/user/gainloss
  *   Accept: application/xml, application/json, application/javascript
  *     Default: application/xml
  *     Required: false
@@ -26,6 +26,18 @@
  *   symbol             = Symbol
  *   term               = Length of time held (in days)
  *
- </pre>
+ */
+import Ember from 'ember';
 
-{{outlet}}
+export
+default DS.Model.extend({
+    close_date: DS.attr('string'),
+    cost: DS.attr('string'),
+    gain_loss: DS.attr('string'),
+    gain_loss_percent: DS.attr('string'),
+    open_date: DS.attr('string'),
+    proceeds: DS.attr('string'),
+    quantity: DS.attr('string'),
+    symbol: DS.attr('string'),
+    term: DS.attr('string')
+});

@@ -1,21 +1,10 @@
-<pre>
- * https://developer.tradier.com/documentation/accounts/get-account-orders
+/**
+ * https://developer.tradier.com/documentation/user/get-orders
  *
  * Endpoint:
  * =========
  *   Method: GET
- *   URL:    /v1/accounts/{account_id}/orders
- *   Accept: application/xml, application/json, application/javascript
- *     Default: application/xml
- *     Required: false
- *   Authorization: Bearer {access token}
- *     Required: true
- *
- *
- * Single Instance Endpoint:
- * =========
- *   Method: GET
- *   URL:    /v1/accounts/{account_id}/orders/{id}
+ *   URL:    /v1/user/orders
  *   Accept: application/xml, application/json, application/javascript
  *     Default: application/xml
  *     Required: false
@@ -49,5 +38,30 @@
  *   num_legs           = The number of legs
  *   strategy           = The option strategy for multileg orders
  *
- </pre>
-{{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    id: DS.attr('string'),
+    type: DS.attr('string'),
+    class: DS.attr('string'),
+    symbol: DS.attr('string'),
+    side: DS.attr('string'),
+    quantity: DS.attr('string'),
+    status: DS.attr('string'),
+    duration: DS.attr('string'),
+    price: DS.attr('string'),
+    option_type: DS.attr('string'),
+    expiration_date: DS.attr('string'),
+    exch: DS.attr('string'),
+    avg_fill_price: DS.attr('string'),
+    exec_quantity: DS.attr('string'),
+    exec_exch: DS.attr('string'),
+    last_price: DS.attr('string'),
+    last_quantity: DS.attr('string'),
+    remaining_quantity: DS.attr('string'),
+    stop_price: DS.attr('string'),
+    num_legs: DS.attr('string'),
+    strategy: DS.attr('string')
+});

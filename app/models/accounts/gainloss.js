@@ -1,4 +1,4 @@
-<pre>
+/**
  * https://developer.tradier.com/documentation/accounts/get-account-gainloss
  *
  * Endpoint:
@@ -26,6 +26,18 @@
  *   symbol             = Symbol
  *   term               = Length of time held (in days)
  *
- </pre>
+ */
+import Ember from 'ember';
 
-{{outlet}}
+export
+default DS.Model.extend({
+    close_date: DS.attr('string'),
+    cost: DS.attr('string'),
+    gain_loss: DS.attr('string'),
+    gain_loss_percent: DS.attr('string'),
+    open_date: DS.attr('string'),
+    proceeds: DS.attr('string'),
+    quantity: DS.attr('string'),
+    symbol: DS.attr('string'),
+    term: DS.attr('string')
+});

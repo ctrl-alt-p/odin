@@ -1,4 +1,5 @@
-<pre> * https://developer.tradier.com/documentation/streaming/get-markets-events
+/**
+ * https://developer.tradier.com/documentation/streaming/get-markets-events
  *
  * Endpoint:
  * =========
@@ -47,5 +48,28 @@
  *   low                = Low
  *   prevClose          = Previous day's close
  *
- </pre>
- {{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    type: DS.attr('string'),
+    symbol: DS.attr('string'),
+    exch: DS.attr('string'),
+    price: DS.attr('string'),
+    size: DS.attr('string'),
+    cvol: DS.attr('string'),
+    date: DS.attr('string'),
+    bid: DS.attr('string'),
+    bidsz: DS.attr('string'),
+    bidexch: DS.attr('string'),
+    biddate: DS.attr('string'),
+    ask: DS.attr('string'),
+    asksz: DS.attr('string'),
+    askexch: DS.attr('string'),
+    askdate: DS.attr('string'),
+    open: DS.attr('string'),
+    high: DS.attr('string'),
+    low: DS.attr('string'),
+    prevClose: DS.attr('string')
+});

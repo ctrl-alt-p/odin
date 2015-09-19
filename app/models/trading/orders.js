@@ -1,4 +1,4 @@
-<pre>
+/**
  * https://developer.tradier.com/documentation/trading/create-order
  *
  * Single-leg Order Endpoint:
@@ -191,5 +191,8 @@
  *   Field              = Description
  *   id                 = Order ID
  *   status             = Acknoweldgement of receipt
- </pre>
-{{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({});

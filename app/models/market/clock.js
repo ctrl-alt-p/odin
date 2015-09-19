@@ -1,4 +1,5 @@
-<pre> * https://developer.tradier.com/documentation/markets/get-clock
+/**
+ * https://developer.tradier.com/documentation/markets/get-clock
  *
  * Endpoint:
  * =========
@@ -22,5 +23,15 @@
  *   state              = Current market state
  *   timestamp          = Current timestamp represented as a Unix epoch
  *
- </pre>
- {{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    date: DS.attr('string'),
+    description: DS.attr('string'),
+    next_change: DS.attr('string'),
+    next_state: DS.attr('string'),
+    state: DS.attr('string'),
+    timestamp: DS.attr('string'),
+});

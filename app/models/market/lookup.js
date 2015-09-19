@@ -1,4 +1,5 @@
-<pre> * https://developer.tradier.com/documentation/markets/get-lookup
+/**
+ * https://developer.tradier.com/documentation/markets/get-lookup
  *
  * Endpoint:
  * =========
@@ -30,5 +31,13 @@
  *   type               = Type of the security (stock, etf, index)
  *   description        = Company description
  *
- </pre>
- {{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    symbol: DS.attr('string'),
+    exchange: DS.attr('string'),
+    type: DS.attr('string'),
+    description: DS.attr('string')
+});

@@ -1,4 +1,5 @@
-<pre> * https://developer.tradier.com/documentation/markets/get-history
+/**
+ * https://developer.tradier.com/documentation/markets/get-history
  *
  * Endpoint:
  * =========
@@ -32,5 +33,15 @@
  *   low                = Low price for the requested interval
  *   volume             = Daily volume
  *
- </pre>
- {{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    date: DS.attr('string'),
+    open: DS.attr('string'),
+    close: DS.attr('string'),
+    high: DS.attr('string'),
+    low: DS.attr('string'),
+    volume: DS.attr('string')
+});

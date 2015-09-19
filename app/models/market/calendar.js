@@ -1,4 +1,5 @@
-<pre> * https://developer.tradier.com/documentation/markets/get-calendar
+/**
+ * https://developer.tradier.com/documentation/markets/get-calendar
  *
  * Endpoint:
  * =========
@@ -31,5 +32,19 @@
  *   start              = The start time for the premarket/open/postmarket time range.
  *   end                = The end time for the premarket/open/postmarket time range.
  *
- </pre>
- {{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    month: DS.attr('string'),
+    year: DS.attr('string'),
+    date: DS.attr('string'),
+    status: DS.attr('string'),
+    description: DS.attr('string'),
+    premarket: DS.attr('string'),
+    open: DS.attr('string'),
+    postmarket: DS.attr('string'),
+    start: DS.attr('string'),
+    end: DS.attr('string')
+});

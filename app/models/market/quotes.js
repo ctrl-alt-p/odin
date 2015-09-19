@@ -1,4 +1,5 @@
-<pre> * https://developer.tradier.com/documentation/markets/get-quotes
+/**
+ * https://developer.tradier.com/documentation/markets/get-quotes
  *
  * Endpoint:
  * =========
@@ -52,5 +53,41 @@
  *   expiration_type    = Type of expiration (standard, weekly)
  *   option_type        = Type of option (Call or Put)
  *
- </pre>
- {{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    symbol: DS.attr('string'),
+    description: DS.attr('string'),
+    exch: DS.attr('string'),
+    type: DS.attr('string'),
+    change: DS.attr('string'),
+    change_percentage: DS.attr('string'),
+    volume: DS.attr('string'),
+    average_volume: DS.attr('string'),
+    last_volume: DS.attr('string'),
+    trade_date: DS.attr('string'),
+    open: DS.attr('string'),
+    high: DS.attr('string'),
+    low: DS.attr('string'),
+    close: DS.attr('string'),
+    prevclose: DS.attr('string'),
+    week_52_high: DS.attr('string'),
+    week_52_low: DS.attr('string'),
+    bid: DS.attr('string'),
+    bidsize: DS.attr('string'),
+    bidexch: DS.attr('string'),
+    bid_date: DS.attr('string'),
+    ask: DS.attr('string'),
+    asksize: DS.attr('string'),
+    askexch: DS.attr('string'),
+    ask_date: DS.attr('string'),
+    open_interest: DS.attr('string'),
+    underlying: DS.attr('string'),
+    strike: DS.attr('string'),
+    contract_size: DS.attr('string'),
+    expiration_date: DS.attr('string'),
+    expiration_type: DS.attr('string'),
+    option_type: DS.attr('string')
+});

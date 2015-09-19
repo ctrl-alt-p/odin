@@ -1,4 +1,4 @@
-<pre>
+/**
  * https://developer.tradier.com/documentation/watchlists/get-watchlists
  *
  * All Watchlists Endpoint:
@@ -167,5 +167,13 @@
  *   id                 = Watchlist ID
  *   public_id          = The watchlist's public Id to be used for sharing
  *
- </pre>
-{{outlet}}
+ */
+import Ember from 'ember';
+
+export
+default DS.Model.extend({
+    watchlists: DS.attr('string'),
+    name: DS.attr('string'),
+    id: DS.attr('string'),
+    public_id: DS.attr('string')
+});
