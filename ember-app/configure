@@ -1,9 +1,0 @@
-#!/bin/bash
-
-set -e
-
-npm   install
-bower install
-bower update
-bower cache clean
-bower list
