@@ -49,7 +49,7 @@
  *   total_equity            = The total account value.
  *
  */
-import Ember from 'ember';
+import DS from 'ember-data';
 
 export
 default DS.Model.extend({
