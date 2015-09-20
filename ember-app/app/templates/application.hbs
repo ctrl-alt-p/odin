@@ -1,14 +1,14 @@
 {{!-- Page Header --}}
 <header>
   <div class="navbar-fixed">
-    <nav class="demo-page-nav deep-orange">
+    <nav class="page-nav indigo darken-4">
       <div class="nav-wrapper">
         <div class="container-fluid">
           <a href="#!" class="brand-logo white-text">
             <img class="ember-logo hide-on-med-and-down" src="images/ember-white.svg" />
-            Materialize
+            Odin Tradier
           </a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse demo-button-collapse deep-orange-text text-darken-2">
+          <a href="#" data-activates="mobile-nav" class="button-collapse button-collapse indigo-text text-darken-2">
             <i class="mdi-navigation-menu"></i>
           </a>
         </div>
@@ -18,13 +18,13 @@
 </header>
 
 {{!-- Left Nav links --}}
-<ul class="side-nav fixed demo-page-submenu" id="mobile-demo">
-  {{#each demoSections as |section|}}
+<ul class="side-nav fixed page-submenu" id="mobile-nav">
+  {{#each navSections as |section|}}
     {{#link-to section.route activeClass='active' tagName='li'}}
       {{#link-to section.route}}
         {{section.name}}
         {{#if section.new}}
-          {{#md-badge class='deep-orange lighten-1 new-badge right white-text'}}New{{/md-badge}}
+          {{#md-badge class='indigo lighten-1 new-badge right white-text'}}New{{/md-badge}}
         {{/if}}
       {{/link-to}}
     {{/link-to}}
@@ -40,8 +40,8 @@
 {{md-modal-container}}
 
 {{!-- Footer bar --}}
-<footer class="page-footer demo-footer deep-orange darken-2">
-  {{#md-copyright text='Copyright Text' startYear=2014}}
+<footer class="page-footer footer indigo darken-2">
+  {{#md-copyright text='Copyright Text' startYear=2015}}
     <a class="grey-text text-lighten-4 right" href="#!">
       More Links
     </a>
