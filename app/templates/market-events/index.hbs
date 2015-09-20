@@ -1,0 +1,150 @@
+<h1>Market events list</h1>
+
+<p>
+  {{link-to "New Market event" "market-events.new" }}
+</p>
+
+{{#if model.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Type
+        </th>
+        <th>
+          Symbol
+        </th>
+        <th>
+          Exch
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          Size
+        </th>
+        <th>
+          Cvol
+        </th>
+        <th>
+          Date
+        </th>
+        <th>
+          Bid
+        </th>
+        <th>
+          Bidsz
+        </th>
+        <th>
+          Bidexch
+        </th>
+        <th>
+          Biddate
+        </th>
+        <th>
+          Ask
+        </th>
+        <th>
+          Asksz
+        </th>
+        <th>
+          Askexch
+        </th>
+        <th>
+          Askdate
+        </th>
+        <th>
+          Open
+        </th>
+        <th>
+          High
+        </th>
+        <th>
+          Low
+        </th>
+        <th>
+          Prevclose
+        </th>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |marketEvent|}}
+        <tr>
+          <td>
+            {{marketEvent.type}}
+          </td>
+          <td>
+            {{marketEvent.symbol}}
+          </td>
+          <td>
+            {{marketEvent.exch}}
+          </td>
+          <td>
+            {{marketEvent.price}}
+          </td>
+          <td>
+            {{marketEvent.size}}
+          </td>
+          <td>
+            {{marketEvent.cvol}}
+          </td>
+          <td>
+            {{marketEvent.date}}
+          </td>
+          <td>
+            {{marketEvent.bid}}
+          </td>
+          <td>
+            {{marketEvent.bidsz}}
+          </td>
+          <td>
+            {{marketEvent.bidexch}}
+          </td>
+          <td>
+            {{marketEvent.biddate}}
+          </td>
+          <td>
+            {{marketEvent.ask}}
+          </td>
+          <td>
+            {{marketEvent.asksz}}
+          </td>
+          <td>
+            {{marketEvent.askexch}}
+          </td>
+          <td>
+            {{marketEvent.askdate}}
+          </td>
+          <td>
+            {{marketEvent.open}}
+          </td>
+          <td>
+            {{marketEvent.high}}
+          </td>
+          <td>
+            {{marketEvent.low}}
+          </td>
+          <td>
+            {{marketEvent.prevClose}}
+          </td>
+          <td>
+            {{link-to "Edit" "market-events.edit" marketEvent}}
+          </td>
+          <td>
+            {{link-to "Show" "market-events.show" marketEvent}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" marketEvent}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Market events found
+  </p>
+{{/if}}
