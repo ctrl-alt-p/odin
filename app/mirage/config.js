@@ -1,10 +1,4 @@
 export default function() {
-this.namespace = 'api';
-this.get('/market-events');
-this.get('/market-events/:id');
-this.post('/market-events');
-this.del('/market-events/:id');
-this.put('/market-events/:id');
 
   // These comments are here to help you get started. Feel free to delete them.
 
