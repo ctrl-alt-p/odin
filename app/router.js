@@ -45,18 +45,6 @@ Router.map(function() {
   });
 
   this.route("watchlists");
-
-  this.resource("market-events", function() {
-    this.route("new");
-
-    this.route("edit", {
-      path: ":market-event_id/edit"
-    });
-
-    this.route("show", {
-      path: ":market-event_id"
-    });
-  });
 });
 
 export default Router;
