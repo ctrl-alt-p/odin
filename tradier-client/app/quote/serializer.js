@@ -1,6 +1,12 @@
 //
 // http://emberigniter.com/fit-any-backend-into-ember-custom-adapters-serializers/#mix-n-match:018f314f454c02f710136e47e7884386
+// - Body of JSONAPISerializer below
 //
+// https://github.com/ember-data/active-model-adapter/blob/master/addon/active-model-serializer.js
+// - keyForAttribute: Converts camelCased attributes to underscored when serializing.
+// - keyForRelationship: Underscores relationship names and appends "_id" or "_ids" when serializing relationship keys.
+//
+import Ember from 'ember';
 import DS from 'ember-data';
 
 export
@@ -54,7 +60,7 @@ default DS.JSONAPISerializer.extend({
         payload = {
             data: quote,
             included: [],
-        }
+        };
 
         return this._normalizeResponse(store, primaryModelClass, payload, id, requestType, true);
     },
@@ -108,8 +114,37 @@ default DS.JSONAPISerializer.extend({
         payload = {
             data: quotes,
             included: [],
-        }
+        };
         return this._normalizeResponse(store, primaryModelClass, payload, id, requestType, false);
+    },
+
+    /**
+     * Converts camelCased attributes to underscored when serializing.
+     * @method keyForAttribute
+     * @param {String} attribute
+     * @return String
+     */
+    keyForAttribute: function(attr) {
+        return attr.decamelize();
+    },
+
+    /**
+     * Underscores relationship names and appends "_id" or "_ids" when serializing
+     * relationship keys.
+     * @method keyForRelationship
+     * @param {String} relationshipModelName
+     * @param {String} kind
+     * @return String
+     */
+    keyForRelationship: function(relationshipModelName, kind) {
+        var key = relationshipModelName.decamelize();
+        if (kind === "belongsTo") {
+            return key + "_id";
+        } else if (kind === "hasMany") {
+            return singularize(key) + "_ids";
+        } else {
+            return key;
+        }
     },
 
     /**
@@ -132,23 +167,23 @@ default DS.JSONAPISerializer.extend({
                 change_percentage: quote.change_percentage,
                 volume: quote.volume,
                 average_volume: quote.average_volume,
-                last_volume: quote.last_volume,
+                lastVolume: quote.last_volume,
                 trade_date: quote.trade_date,
                 open: quote.open,
                 high: quote.high,
                 low: quote.low,
                 close: quote.close,
                 prevclose: quote.prevclose,
-                week_52_high: quote.week_52_high,
-                week_52_low: quote.week_52_low,
+                week52_high: quote.week_52_high,
+                week52_low: quote.week_52_low,
                 bid: quote.bid,
                 bidsize: quote.bidsize,
                 bidexch: quote.bidexch,
-                bid_date: quote.bid_date,
+                bidDate: quote.bid_date,
                 ask: quote.ask,
                 asksize: quote.asksize,
                 askexch: quote.askexch,
-                ask_date: quote.ask_date,
+                askDate: quote.ask_date,
             }
         };
         return output;

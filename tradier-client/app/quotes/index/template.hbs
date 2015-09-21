@@ -104,9 +104,6 @@
         <th>
           Option type
         </th>
-        <th colspan="3">
-          Actions
-        </th>
       </tr>
     </thead>
     <tbody>
@@ -207,15 +204,6 @@
           </td>
           <td>
             {{quote.optionType}}
-          </td>
-          <td>
-            {{link-to "Edit" "quotes.edit" quote}}
-          </td>
-          <td>
-            {{link-to "Show" "quotes.show" quote}}
-          </td>
-          <td>
-            <a href="#" {{action "remove" quote}}>Remove</a>
           </td>
         </tr>
       {{/each}}
