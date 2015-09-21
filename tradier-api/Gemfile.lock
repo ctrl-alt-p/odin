@@ -139,6 +139,3 @@ DEPENDENCIES
   sprockets-rails!
   sqlite3
   web-console!
-
-BUNDLED WITH
-   1.10.6
