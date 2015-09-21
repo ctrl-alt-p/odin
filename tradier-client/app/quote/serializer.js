@@ -119,7 +119,7 @@ default DS.JSONAPISerializer.extend({
      */
     mapQuoteToJsonApiFormat: function(quote) {
         var output = {
-            id: quote.symbol,
+            id: quote.symbol.toLowerCase(),
             relationships: {},
             type: "quotes",
             attributes: {

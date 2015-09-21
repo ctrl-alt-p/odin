@@ -113,7 +113,7 @@
       {{#each model as |quote|}}
         <tr>
           <td>
-            {{quote.symbol}}
+            <a href="/quotes/{{quote.id}}">{{quote.symbol}}</a>
           </td>
           <td>
             {{quote.description}}
