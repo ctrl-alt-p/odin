@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_number: 1
+  day_trader: false
+  option_level: 1
+  account_type: MyString
+  name: MyString
+  status: MyString
+  classification: MyString
+
+two:
+  account_number: 1
+  day_trader: false
+  option_level: 1
+  account_type: MyString
+  name: MyString
+  status: MyString
+  classification: MyString

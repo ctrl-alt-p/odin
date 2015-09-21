@@ -1,0 +1,4 @@
+class UserBalanceSerializer < ActiveModel::Serializer
+  attributes :id, :cash_available, :price, :price, :close_pl, :price, :current_requirement, :price, :day_trade_buying_power, :price, :price, :dividend_balance, :price, :equity, :price, :fed_call, :price, :long_liquid_value, :price, :long_market_value, :price, :maintenance_call, :price, :price, :market_value, :price, :net_value, :price, :open_pl, :price, :option_buying_power, :price, :option_long_value, :price, :option_requirement, :price, :option_short_value, :price, :pending_cash, :price, :pending_orders_count, :sweep, :short_liquid_value, :price, :short_market_value, :price, :stock_buying_power, :price, :stock_long_value, :price, :stock_short_value, :price, :uncleared_funds, :price, :unsettled_funds, :price, :total_cash, :price, :total_equity, :price
+  has_one :user
+end
