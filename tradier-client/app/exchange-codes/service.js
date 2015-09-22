@@ -41,7 +41,7 @@ default Ember.Service.extend({
     },
 
     exchange_name: function(type, exch) {
-        if (type == "option") {
+        if (type === "option") {
             return this.option_exchanges[exch];
         } else {
             return this.stock_exchanges[exch];

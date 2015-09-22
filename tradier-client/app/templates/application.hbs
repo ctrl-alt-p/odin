@@ -1,6 +1,49 @@
-<h2 id="title">Welcome to Ember.js</h2>
+{{!-- Page Header --}}
+<header>
+  <div class="navbar-fixed">
+    <nav class="demo-page-nav indigo">
+      <div class="nav-wrapper">
+        <div class="container-fluid">
+          <a href="#!" class="brand-logo white-text">
+            <img class="ember-logo hide-on-med-and-down" src="images/ember-white.svg" />
+            Materialize
+          </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse demo-button-collapse indigo-text text-darken-2">
+            <i class="mdi-navigation-menu"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
 
-{{outlet}}
+{{!-- Left Nav links --}}
+<ul class="side-nav fixed demo-page-submenu" id="mobile-demo">
+  {{#each navSections as |section|}}
+    {{#link-to section.route activeClass='active' tagName='li'}}
+      {{#link-to section.route}}
+        {{section.name}}
+        {{#if section.new}}
+          {{#md-badge class='indigo lighten-1 new-badge right white-text'}}New{{/md-badge}}
+        {{/if}}
+      {{/link-to}}
+    {{/link-to}}
+  {{/each}}
+</ul>
 
-{{!-- ember-cli-materialize modal container --}}
+{{!-- Main page body --}}
+<main class="site-content">
+  {{outlet}}
+</main>
+
+{{!-- Modals on the page --}}
 {{md-modal-container}}
+
+{{!-- Footer bar --}}
+<footer class="page-footer demo-footer indigo darken-2">
+  {{#md-copyright text='Copyright Text' startYear=2014}}
+    <a class="grey-text text-lighten-4 right" href="#!">
+      More Links
+    </a>
+  {{/md-copyright}}
+</footer>
