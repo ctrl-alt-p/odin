@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: 
+  order_type: MyString
+  classification: MyString
+  symbol: MyString
+  side: MyString
+  quantity: 1
+  status: MyString
+  duration: MyString
+  price: MyString
+  price: 9.99
+  option_type: MyString
+  expiration_date: 2015-09-20
+  exch: MyString
+  avg_fill_price: MyString
+  price: 9.99
+  exec_quantity: 1
+  exec_exch: MyString
+  last_price: MyString
+  price: 9.99
+  last_quantity: 1
+  remaining_quantity: 1
+  stop_price: MyString
+  price: 9.99
+  num_legs: 1
+  strategy: MyString
+
+two:
+  user: 
+  order_type: MyString
+  classification: MyString
+  symbol: MyString
+  side: MyString
+  quantity: 1
+  status: MyString
+  duration: MyString
+  price: MyString
+  price: 9.99
+  option_type: MyString
+  expiration_date: 2015-09-20
+  exch: MyString
+  avg_fill_price: MyString
+  price: 9.99
+  exec_quantity: 1
+  exec_exch: MyString
+  last_price: MyString
+  price: 9.99
+  last_quantity: 1
+  remaining_quantity: 1
+  stop_price: MyString
+  price: 9.99
+  num_legs: 1
+  strategy: MyString

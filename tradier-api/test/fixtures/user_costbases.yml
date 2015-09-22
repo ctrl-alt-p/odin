@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: 
+  close_date: 2015-09-20
+  cost: MyString
+  price: 9.99
+  gain_loss: MyString
+  price: 9.99
+  gain_loss_percent: MyString
+  price: 9.99
+  open_date: 2015-09-20
+  proceeds: MyString
+  price: 9.99
+  quantity: 1
+  symbol: MyString
+  term: 1
+
+two:
+  user: 
+  close_date: 2015-09-20
+  cost: MyString
+  price: 9.99
+  gain_loss: MyString
+  price: 9.99
+  gain_loss_percent: MyString
+  price: 9.99
+  open_date: 2015-09-20
+  proceeds: MyString
+  price: 9.99
+  quantity: 1
+  symbol: MyString
+  term: 1
