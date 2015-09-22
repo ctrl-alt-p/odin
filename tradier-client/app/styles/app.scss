@@ -149,12 +149,20 @@ header, main, footer.footer {
 //
 //
 
-body.site > div.ember-view {
+// Footer floats at the bottom of the page
+body > div.ember-view {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 
     .site-content {
         flex: 1;
+    }
+}
+
+// Side-nav is below the open menu bar
+@media only screen and (max-width: 992px) {
+    .side-nav.fixed {
+        top: 64px;
     }
 }
