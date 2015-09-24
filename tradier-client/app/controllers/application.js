@@ -10,7 +10,13 @@ default Controller.extend({
         route: 'index',
         name: 'Home'
     }, {
-        route: 'quotes',
-        name: 'S&P 500 Quotes'
+        route: 'stocks',
+        name: 'Stocks'
+    }, {
+        route: 'options',
+        name: 'Options'
+    }, {
+        route: 'my-portfolio',
+        name: 'My Portfolio'
     }])
 });
