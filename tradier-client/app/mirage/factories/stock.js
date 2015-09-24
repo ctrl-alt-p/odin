@@ -1,5 +1,30 @@
 import Mirage from 'ember-cli-mirage';
 
-export default Mirage.Factory.extend(
-  {symbol: 'MyString' }
-);
+export
+default Mirage.Factory.extend({
+    symbol: "SPY",
+    description: "SPDR S&P 500",
+    exch: "P",
+    last: 197.29,
+    change: 1.85,
+    changePercentage: 0.95,
+    volume: 34906785,
+    averageVolume: 144724626,
+    lastVolume: 100,
+    tradeDate: 1442849425000,
+    open: 196.44,
+    high: 197.68,
+    low: 196.24,
+    close: null,
+    prevclose: 195.45,
+    week52High: 213.78,
+    week52Low: 181.92,
+    bid: 197.28,
+    bidsize: 23,
+    bidexch: "Z",
+    bidDate: 1442849426000,
+    ask: 197.29,
+    asksize: 18,
+    askexch: "Q",
+    askDate: 1442849426000,
+});

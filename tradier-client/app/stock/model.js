@@ -8,13 +8,16 @@ default DS.Model.extend({
     symbol: DS.attr('string'),
     description: DS.attr('string'),
     exch: DS.attr('string'),
-    type: DS.attr('string'),
+    //
+    tradeDate: DS.attr('date'),
+    //
     change: DS.attr('number'),
     changePercentage: DS.attr('number'),
+    //
     volume: DS.attr('number'),
     averageVolume: DS.attr('number'),
     lastVolume: DS.attr('number'),
-    tradeDate: DS.attr('date'),
+    //
     open: DS.attr('number'),
     high: DS.attr('number'),
     low: DS.attr('number'),
@@ -22,10 +25,12 @@ default DS.Model.extend({
     prevclose: DS.attr('number'),
     week52High: DS.attr('number'),
     week52Low: DS.attr('number'),
+    //
     bid: DS.attr('number'),
     bidsize: DS.attr('number'),
     bidexch: DS.attr('string'),
     bidDate: DS.attr('date'),
+    //
     ask: DS.attr('number'),
     asksize: DS.attr('number'),
     askexch: DS.attr('string'),

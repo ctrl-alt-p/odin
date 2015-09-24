@@ -140,7 +140,7 @@ default DS.JSONAPISerializer.extend({
         if (kind === "belongsTo") {
             return key + "_id";
         } else if (kind === "hasMany") {
-            return singularize(key) + "_ids";
+            return key.singularize() + "_ids";
         } else {
             return key;
         }
@@ -155,7 +155,7 @@ default DS.JSONAPISerializer.extend({
         var output = {
             id: quote.symbol.toLowerCase(),
             relationships: {},
-            type: "quotes",
+            type: "stocks",
             attributes: {
                 symbol: quote.symbol,
                 description: quote.description,
