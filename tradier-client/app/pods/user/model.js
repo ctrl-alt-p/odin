@@ -1,12 +1,24 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
-  accountNumber: DS.attr('number'),
-  dayTrader: DS.attr('boolean'),
-  optionLevel: DS.attr('number'),
-  accountType: DS.attr('string'),
-  lastUpdate: DS.attr('date'),
-  name: DS.attr('string'),
-  status: DS.attr('string'),
-  classification: DS.attr('string')
+export
+default DS.Model.extend({
+    //
+    // Model attributes:
+    //
+    name: DS.attr('string'),
+    createdAt: DS.attr('date'),
+    updatedAt: DS.attr('date'),
+    //
+    // User's permissions:
+    //
+    classification: DS.attr('string'),
+    dayTrader: DS.attr('boolean'),
+    optionLevel: DS.attr('number'),
+    status: DS.attr('string'),
+    //
+    // Association to Account:
+    //
+    accountNumber: DS.attr('number'),
+    accountType: DS.attr('string'),
+    account: DS.belongsTo('account'),
 });
