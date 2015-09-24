@@ -11,7 +11,6 @@ import DS from 'ember-data';
 
 export
 default DS.JSONAPISerializer.extend({
-
     /**
      * @method normalizeSingleResponse
      * @param {DS.Store} store
@@ -156,12 +155,11 @@ default DS.JSONAPISerializer.extend({
         var output = {
             id: quote.symbol.toLowerCase(),
             relationships: {},
-            type: "quotes",
+            type: "stocks",
             attributes: {
                 symbol: quote.symbol,
                 description: quote.description,
                 exch: quote.exch,
-                type: quote.type,
                 last: quote.last,
                 change: quote.change,
                 change_percentage: quote.change_percentage,

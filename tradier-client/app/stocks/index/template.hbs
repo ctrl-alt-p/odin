@@ -1,0 +1,18 @@
+<div class="container">
+  {{#md-collection header='S&P 500 Stocks' content=model as |item|}}
+   <a href="/stocks/{{item.id}}">
+     <div class="collection-item avatar">
+        <i class="circle green mdi-action-favorite"></i>
+       <span class="title">
+          {{item.symbol}}
+        </span>
+       <p>
+          {{item.description}}
+        </p>
+       {{#link-to item.route class='secondary-content'}}
+          <i class="mdi-action-favorite"></i>
+        {{/link-to}}
+     </div>
+    </a>
+  {{/md-collection}}
+</div>

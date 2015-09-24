@@ -3,6 +3,7 @@
 module.exports = function(environment) {
     var ENV = {
         modulePrefix: 'tradier-client',
+        podModulePrefix: 'tradier-client/pods',
         environment: environment,
         baseURL: '/',
         locationType: 'auto',
