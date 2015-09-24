@@ -1,0 +1,53 @@
+<form {{action "save" on="submit"}}>
+  <div>
+    <label>
+      Account number
+      {{input type="text" value=model.accountNumber}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Day trader
+      {{input type="text" value=model.dayTrader}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Option level
+      {{input type="text" value=model.optionLevel}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Account type
+      {{input type="text" value=model.accountType}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Last update
+      {{input type="text" value=model.lastUpdate}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Name
+      {{input type="text" value=model.name}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Status
+      {{input type="text" value=model.status}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Classification
+      {{input type="text" value=model.classification}}
+    </label>
+  </div>
+  <div>
+    <input type="submit" value="Save">
+  </div>
+</form>
