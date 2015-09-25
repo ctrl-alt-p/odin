@@ -80,6 +80,42 @@ Router.map(function() {
   });
 
   this.route("options");
+
+  this.resource("user-balances", function() {
+    this.route("new");
+
+    this.route("edit", {
+      path: ":user-balance_id/edit"
+    });
+
+    this.route("show", {
+      path: ":user-balance_id"
+    });
+  });
+
+  this.resource("user-costbases", function() {
+    this.route("new");
+
+    this.route("edit", {
+      path: ":user-costbasis_id/edit"
+    });
+
+    this.route("show", {
+      path: ":user-costbasis_id"
+    });
+  });
+
+  this.resource("user-histories", function() {
+    this.route("new");
+
+    this.route("edit", {
+      path: ":user-history_id/edit"
+    });
+
+    this.route("show", {
+      path: ":user-history_id"
+    });
+  });
 });
 
 export default Router;
