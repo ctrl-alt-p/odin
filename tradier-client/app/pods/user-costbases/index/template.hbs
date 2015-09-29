@@ -1,0 +1,114 @@
+<h1>User-costbases list</h1>
+
+<p>
+  {{link-to "New User-costbasis" "user-costbases.new" }}
+</p>
+
+{{#if model.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>
+          User
+        </th>
+        <th>
+          Closedate
+        </th>
+        <th>
+          Cost
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          Gainloss
+        </th>
+        <th>
+          Gainlosspercent
+        </th>
+        <th>
+          Opendate
+        </th>
+        <th>
+          Proceeds
+        </th>
+        <th>
+          Quantity
+        </th>
+        <th>
+          Symbol
+        </th>
+        <th>
+          Term
+        </th>
+        <th>
+          Createdat
+        </th>
+        <th>
+          Updatedat
+        </th>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |user-costbasis|}}
+        <tr>
+          <td>
+            {{user-costbasis.user}}
+          </td>
+          <td>
+            {{user-costbasis.closeDate}}
+          </td>
+          <td>
+            {{user-costbasis.cost}}
+          </td>
+          <td>
+            {{user-costbasis.price}}
+          </td>
+          <td>
+            {{user-costbasis.gainLoss}}
+          </td>
+          <td>
+            {{user-costbasis.gainLossPercent}}
+          </td>
+          <td>
+            {{user-costbasis.openDate}}
+          </td>
+          <td>
+            {{user-costbasis.proceeds}}
+          </td>
+          <td>
+            {{user-costbasis.quantity}}
+          </td>
+          <td>
+            {{user-costbasis.symbol}}
+          </td>
+          <td>
+            {{user-costbasis.term}}
+          </td>
+          <td>
+            {{user-costbasis.createdAt}}
+          </td>
+          <td>
+            {{user-costbasis.updatedAt}}
+          </td>
+          <td>
+            {{link-to "Edit" "user-costbases.edit" user-costbasis}}
+          </td>
+          <td>
+            {{link-to "Show" "user-costbases.show" user-costbasis}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" user-costbasis}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No User-costbases found
+  </p>
+{{/if}}
